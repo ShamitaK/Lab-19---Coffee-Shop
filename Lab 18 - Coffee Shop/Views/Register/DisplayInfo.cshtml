@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewData["Title"] = "DisplayInfo";
+}
+
+@model RegisterUser
+<h1>DisplayInfo</h1>
+
+<table class="table-responsive-sm, table">
+    <tr>
+        <th>Username</th>
+        <th>Email</th>
+        <th>Password</th>
+        <th>Gender</th>
+        <th>Age</th>
+        <th>Phone Number</th>
+    </tr>
+    </table>
+
+    <table>
+        <tr>
+            
+            <th>@Model.UserName</th>
+            <th>@Model.Email</th>
+            <th>@Model.Password</th>
+            <th>@Model.Gender</th>
+            <th>@Model.Age</th>
+            <th>@Model.PhoneNumber</th>
+
+        </tr>
+    </table>
+

@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewData["Title"] = "SummaryPage";
+}
+
+
+@model RegisterUser
+
+<h1>Welcome @Model.UserName!</h1>
+
+<form action="../Register/DisplayInfo" method="post">
+    <input type="submit" name="submit" value="User Info" />
+</form>

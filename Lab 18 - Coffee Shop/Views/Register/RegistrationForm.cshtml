@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewData["Title"] = "RegistrationForm";
+}
+
+@model RegisterUser
+
+@Html.ValidationSummary();
+
+
+<h1>RegistrationForm</h1>
+<form action="../Register/SummaryPage" method="post">
+    <div class="col-md-2">
+        @Html.LabelFor(m => m.UserName)
+        <input type="text" name="UserName" value="@Model.UserName" placeholder="JohnSmith123" style="background-color:lightskyblue" />
+        @Html.LabelFor(m => m.Email)
+        <input type="text" name="Email" value="@Model.Email" placeholder="JohnSmith123@yahoo.com" style="background-color:lightskyblue" />
+        @Html.LabelFor(m => m.Password)
+        <input type="text" name="Password" value="@Model.Password" placeholder="Password" style="background-color:lightskyblue" />
+        @Html.LabelFor(m => m.Gender)
+        <select name="Gender" value="@Model.Gender" placeholder="Gender" style="background-color:lightskyblue">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Unidentified">Unidentified</option>
+            <option value="NoAnswer">Wish Not to Answer</option>
+        </select>
+        @Html.LabelFor(m => m.Age)
+        <input type="text" name="Age" value="@Model.Age" placeholder="Age" style="background-color:lightskyblue" >
+           
+        @Html.LabelFor(m => m.PhoneNumber)
+        <input type="text" name="PhoneNumber" value="@Model.PhoneNumber" placeholder="123-456-7890" style="background-color:lightskyblue" /><br />
+
+        <br /><input type="submit" name="submit" value="Add User" />
+
+    </div>
+
+</form>
+
+
